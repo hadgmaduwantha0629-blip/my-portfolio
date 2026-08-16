@@ -14,20 +14,20 @@ export function About() {
         <div className="about-layout">
           <motion.div
             className="about-heading"
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.35 }}
-            transition={{ duration: 0.65 }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
             <p className="technical-kicker">Computer Studies</p>
             <h2>Undergraduate building practical digital systems.</h2>
           </motion.div>
           <motion.div
             className="about-copy"
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.35 }}
-            transition={{ duration: 0.65, delay: 0.1 }}
+            transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
           >
             <p>
               Final-year Computer Studies undergraduate and software developer interested in web,

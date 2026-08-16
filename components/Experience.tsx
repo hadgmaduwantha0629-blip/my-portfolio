@@ -24,14 +24,19 @@ export function Experience() {
             <motion.span className="timeline-progress" style={{ scaleY }} aria-hidden="true" />
             {timeline.map((item, index) => (
               <motion.article
-                className="timeline-item"
+                className="timeline-item hover:bg-white/5 rounded-xl p-4 transition-colors relative"
                 key={item.label}
                 initial={{ opacity: 0, x: 28 }}
                 whileInView={{ opacity: 1, x: 0 }}
+                whileHover={{ x: 5 }}
                 viewport={{ once: true, amount: 0.4 }}
                 transition={{ duration: 0.55, delay: index * 0.08 }}
               >
-                <span className="timeline-dot" />
+                <motion.span 
+                  className="timeline-dot" 
+                  animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
+                  transition={{ repeat: Infinity, duration: 2 }}
+                />
                 <span className="timeline-number">{item.number}</span>
                 <div>
                   <p>{item.meta}</p>

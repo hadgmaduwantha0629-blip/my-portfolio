@@ -26,20 +26,30 @@ export function Skills() {
           <div className="skill-branches">
             {skillGroups.map((group, index) => (
               <motion.article
-                className="skill-node"
+                className="skill-node backdrop-blur-sm bg-white/5 border border-white/10 shadow-lg rounded-2xl p-6 relative overflow-hidden"
                 key={group.name}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.25 }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
               >
-                <span className="node-point" />
-                <h3>{group.name}</h3>
-                <ul>
-                  {group.skills.map((skill) => (
-                    <li key={skill}>{skill}</li>
-                  ))}
-                </ul>
+                <motion.div
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{ 
+                    repeat: Infinity,
+                    duration: 4 + index * 0.5,
+                    ease: "easeInOut"
+                  }}
+                  className="w-full h-full"
+                >
+                  <span className="node-point" />
+                  <h3>{group.name}</h3>
+                  <ul>
+                    {group.skills.map((skill) => (
+                      <li key={skill}>{skill}</li>
+                    ))}
+                  </ul>
+                </motion.div>
               </motion.article>
             ))}
           </div>

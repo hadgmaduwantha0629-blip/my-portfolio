@@ -19,14 +19,15 @@ export function Projects() {
         <div className="project-stack">
           {projects.map((project, index) => (
             <motion.article
-              className="project-case"
+              className="project-case backdrop-blur-md bg-white/5 border border-white/10 shadow-xl rounded-2xl overflow-hidden relative"
               key={project.title}
               initial={{ opacity: 0, y: 36 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 1.02, y: -5 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.65, delay: index * 0.04 }}
             >
-              <div className="project-case-head">
+              <div className="project-case-head p-6">
                 <span className="project-number">{project.number}</span>
                 <div>
                   <p>{project.type}</p>

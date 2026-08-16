@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, type Variants, useMotionValue, useSpring, useTransform } from "framer-motion";
+import Image from "next/image";
 import { GeometricBackground } from "./GeometricBackground";
 import { profile } from "@/lib/data";
 
@@ -37,25 +38,49 @@ export function Hero() {
         <span className="hero-node hero-node-b" />
         <span className="hero-diagonal" />
       </motion.div>
-      <div className="hero-inner">
-        <motion.p className="technical-kicker" variants={reveal} initial="hidden" animate="visible" custom={0.35}>
-          01 / Introduction
-        </motion.p>
-        <motion.h1 className="hero-title" variants={reveal} initial="hidden" animate="visible" custom={0.45}>
-          <span>{profile.firstName}</span>
-          <span>{profile.lastName}</span>
-        </motion.h1>
-        <motion.div className="hero-role" variants={reveal} initial="hidden" animate="visible" custom={0.58}>
-          <span>{profile.role}</span>
-          <span>{profile.secondaryRole}</span>
-        </motion.div>
-        <motion.p className="hero-copy" variants={reveal} initial="hidden" animate="visible" custom={0.7}>
-          Building digital experiences across web, mobile, AI and IoT.
-        </motion.p>
-        <motion.div className="hero-meta" variants={reveal} initial="hidden" animate="visible" custom={0.82}>
-          <span>Computer Studies Undergraduate</span>
-          <span>{profile.location}</span>
-          <span>Web / Mobile / AI / IoT</span>
+      <div className="hero-inner" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '2rem' }}>
+        <div style={{ flex: '1 1 300px' }}>
+          <motion.p className="technical-kicker" variants={reveal} initial="hidden" animate="visible" custom={0.35}>
+            01 / Introduction
+          </motion.p>
+          <motion.h1 className="hero-title" variants={reveal} initial="hidden" animate="visible" custom={0.45}>
+            <span>{profile.firstName}</span>
+            <span>{profile.lastName}</span>
+          </motion.h1>
+          <motion.div className="hero-role" variants={reveal} initial="hidden" animate="visible" custom={0.58}>
+            <span>{profile.role}</span>
+            <span>{profile.secondaryRole}</span>
+          </motion.div>
+          <motion.p className="hero-copy" variants={reveal} initial="hidden" animate="visible" custom={0.7}>
+            Building digital experiences across web, mobile, AI and IoT.
+          </motion.p>
+          <motion.div className="hero-meta" variants={reveal} initial="hidden" animate="visible" custom={0.82}>
+            <span>Computer Studies Undergraduate</span>
+            <span>{profile.location}</span>
+            <span>Web / Mobile / AI / IoT</span>
+          </motion.div>
+        </div>
+
+        <motion.div 
+          style={{ width: 'clamp(200px, 30vw, 350px)', aspectRatio: '1/1', position: 'relative', borderRadius: '50%', overflow: 'hidden', border: '1px solid var(--line-strong)', flexShrink: 0 }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.9, ease: "easeOut" }}
+        >
+          <motion.div
+            animate={{ y: [-15, 15, -15] }}
+            transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+            style={{ width: '100%', height: '100%', position: 'relative' }}
+          >
+            <Image 
+              src="/mypic.png" 
+              alt={`${profile.firstName} ${profile.lastName}`} 
+              fill 
+              sizes="(max-width: 768px) 100vw, 33vw"
+              style={{ objectFit: 'cover' }}
+              priority 
+            />
+          </motion.div>
         </motion.div>
       </div>
       <a className="scroll-cue" href="#about" aria-label="Scroll to about">
