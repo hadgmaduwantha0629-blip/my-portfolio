@@ -14,9 +14,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Gevindu Maduwantha | Software Developer",
+  title: "Gevindu Maduwantha | Software Developer & Computer Vision Researcher",
   description:
-    "Creative technology portfolio for a Computer Studies undergraduate and software developer working across web, mobile, AI and IoT.",
+    "Portfolio of Gevindu Maduwantha, a Computer Studies undergraduate, software developer and deep learning researcher specializing in computer vision, web and mobile development, ERP systems, artificial intelligence, IoT and creative technology.",
+  keywords: [
+    "Gevindu Maduwantha",
+    "Software Developer",
+    "Computer Vision Researcher",
+    "Deep Learning Researcher",
+    "Artificial Intelligence",
+    "Computer Vision",
+    "Deep Learning",
+    "Web Development",
+    "Mobile Development",
+    "ERP Systems",
+    "IoT",
+    "Full Stack Development",
+  ],
+  authors: [{ name: "Gevindu Maduwantha" }],
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

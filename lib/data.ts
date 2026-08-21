@@ -10,12 +10,12 @@ export const profile = {
   initials: "GM",
   firstName: "Gevindu",
   lastName: "Maduwantha",
-  role: "Software Developer",
+  role: "Software Developer Intern",
   secondaryRole: "Creative Technologist",
   location: "Sri Lanka",
-  email: "hello@gevindumaduwanta.dev",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  email: "hadgmaduwantha0629@gmail.com",
+  github: "https://github.com/hadgmaduwantha0629-blip",
+  linkedin: "https://www.linkedin.com/in/gevinduatme/",
   cv: "/cv.pdf",
 };
 

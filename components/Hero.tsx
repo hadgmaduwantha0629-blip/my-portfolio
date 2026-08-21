@@ -52,12 +52,12 @@ export function Hero() {
             <span>{profile.secondaryRole}</span>
           </motion.div>
           <motion.p className="hero-copy" variants={reveal} initial="hidden" animate="visible" custom={0.7}>
-            Building digital experiences across web, mobile, AI and IoT.
+             Software Developer Intern, continuously learning and building real world solutions while exploring software engineering, ERP systems, AI, computer vision, deep learning, cloud engineering and system infrastructure..
           </motion.p>
           <motion.div className="hero-meta" variants={reveal} initial="hidden" animate="visible" custom={0.82}>
             <span>Computer Studies Undergraduate</span>
             <span>{profile.location}</span>
-            <span>Web / Mobile / AI / IoT</span>
+            <span>Web / Mobile / AI / IoT / ERP / ML / Robotics / Computer Vision</span>
           </motion.div>
         </div>
 
